@@ -43,7 +43,7 @@ public class Grafo {
         for (String[] conexion : conexiones) {
             int ciudad1 = ciudades.get(conexion[0]);
             int ciudad2 = ciudades.get(conexion[1]);
-            double distancia = Double.parseDouble(conexion[2]);
+            double distancia = Double.parseDouble(conexion[2].replaceAll("[^0-9.]", ""));
             distancias[ciudad1][ciudad2] = distancia;
         }
     }
